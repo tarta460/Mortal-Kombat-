@@ -1,0 +1,50 @@
+# Mortal-Kombat-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>2D Fight Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>2D FIGHT GAME</h1>
+
+    <!-- Pantalla de selección -->
+    <div id="selection-screen">
+      <h2>Elegí tu personaje</h2>
+      <div class="character-grid">
+        <img src="assets/pyro.png" alt="Pyro" onclick="selectCharacter('Pyro')">
+        <img src="assets/volt.png" alt="Volt" onclick="selectCharacter('Volt')">
+        <img src="assets/aqua.png" alt="Aqua" onclick="selectCharacter('Aqua')">
+        <img src="assets/shade.png" alt="Shade" onclick="selectCharacter('Shade')">
+      </div>
+    </div>
+
+    <!-- Pantalla de pelea -->
+    <div id="battle-screen" class="hidden">
+      <img src="assets/bg.png" class="background" alt="fondo">
+
+      <div class="arena">
+        <div class="fighter">
+          <img id="player-img" src="" alt="Jugador">
+          <p id="player-name"></p>
+          <p>HP: <span id="player-hp">100</span></p>
+        </div>
+        <div class="fighter">
+          <img id="enemy-img" src="" alt="Enemigo">
+          <p id="enemy-name"></p>
+          <p>HP: <span id="enemy-hp">100</span></p>
+        </div>
+      </div>
+
+      <button id="attack-btn" onclick="attack()">Atacar</button>
+      <div id="log" class="log"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
